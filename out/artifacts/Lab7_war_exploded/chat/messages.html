@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 5 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<script type="text/javascript">
+    function onLoad() {
+        document.getElementById("message").focus();
+    }
+</script>
+<body onload="onLoad()">
+    <form class="form-inline" action="/chat/send_message" method="post">
+        <div class="input-group mb-3" style="width: 70%; margin-left: 2%">
+            <input type="text" class="form-control" autofocus id="message" name="message" placeholder="Введите сообщение" style="width: 70%">
+            <input type="text" class="form-control" id="recipient" name="recipient" placeholder="Кому" style="width: 30%">
+            <div class="input-group-append">
+                <input type="submit" class="btn btn-primary mr-sm-2" value="Отправить">
+            </div>
+        </div>
+    </form>
+    <div style="margin-left: 2%">
+        <a href="/chat/logout" class="btn btn-outline-success" target="_top" style="margin-bottom: auto">Выйти из чата</a>
+    </div>
+</body>
+</html>
